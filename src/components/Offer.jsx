@@ -1,9 +1,10 @@
 import React from "react";
+
 function Offer({ url, MainImage, title, currency_code, price, quantity }) {
-  let slicedTitle =
+  const slicedTitle =
     title?.length > 50 ? title.slice(0, 50) + "..." : title?.length;
 
-  let classesQuantity =
+  const classesQuantity =
     (quantity <= 10 && `level-low`) ||
     (quantity <= 20 && `level-medium`) ||
     (quantity > 20 && `level-high`) ||
@@ -23,7 +24,6 @@ function Offer({ url, MainImage, title, currency_code, price, quantity }) {
           {price + " "}
           {currency_code !== "USD" && currency_code !== "EUR" && currency_code}
         </p>
-
         <p className={`item-quantity ${classesQuantity}`}>{quantity} left</p>
       </div>
     </div>
