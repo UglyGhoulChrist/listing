@@ -1,8 +1,7 @@
 import React from "react";
 
 function Offer({ url, MainImage, title, currency_code, price, quantity }) {
-  const slicedTitle =
-    title?.length > 50 ? title.slice(0, 50) + "..." : title?.length;
+  const slicedTitle = title?.length > 50 ? title.slice(0, 50) + "..." : title;
 
   const classesQuantity =
     (quantity <= 10 && `level-low`) ||
